@@ -54,14 +54,8 @@ public class MainActivity extends AppCompatActivity {
         smsSensor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
-                    Intent intent = new Intent();
-                    intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivity(intent);
-                }
-                catch(Exception e){
-                    e.printStackTrace();
-                }
+                Intent intent = new Intent(MainActivity.this,smsSend.class);
+                startActivity(intent);
             }
         });
 
